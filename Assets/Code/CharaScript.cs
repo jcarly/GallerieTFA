@@ -74,12 +74,17 @@ public class CharaScript : ScriptedAnimationBehaviour
                 _animatorController.SetFloat("LocomotionBlendingValue", 2f);
                 _animatorController.SetFloat("Caracterisation", 1f);
                 break;
+            case 12:
+                _animatorController.SetTrigger("HeavyWeaponRunTrigger");
+                break;
             case 13:
                 transform.Rotate(0, -90, 0);
                 transform.Translate(0, 0, -4);
-
                 _animatorController.SetBool("Push", true);
                 break;
+            case 14:
+                _animatorController.SetTrigger("GymTrigger");
+                break;                
         }
 
     }
