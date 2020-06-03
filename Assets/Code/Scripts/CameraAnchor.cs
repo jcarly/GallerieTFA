@@ -18,12 +18,6 @@ public class CameraAnchor : MonoBehaviour
     {
         _anchorPoints = anchorPointsParent.transform.GetComponentsInChildren<CameraAnchorPoint>();
 
-        ScriptedAnimationBehaviour[] scriptedAnimationBehaviourArray = anchorPointsParent.transform.GetComponentsInChildren<ScriptedAnimationBehaviour>();
-        for(int i = 0; i < scriptedAnimationBehaviourArray.Length; ++i)
-        {
-            scriptedAnimationBehaviourArray[i].enabled = false;
-        }
-
         transform.position = _anchorPoints[0].transform.position;
         transform.rotation = _anchorPoints[0].transform.rotation;
 
@@ -48,6 +42,7 @@ public class CameraAnchor : MonoBehaviour
 
     private void ChangeAnchor()
     {
+        Debug.Log("Change Anchor");
         StopAllCoroutines();
         StartCoroutine(LaunchInterpolation());
         cameraController.ResetView();
@@ -86,6 +81,8 @@ public class CameraAnchor : MonoBehaviour
 
     private void EnableAnimationBehaviour(ScriptedAnimationBehaviour animationBehaviour, bool value)
     {
+        Debug.Log(animationBehaviour);
+        Debug.Log(value);
         if (animationBehaviour != null)
         {
             animationBehaviour.enabled = value;

@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7014b1fe922434bb696589f9b82de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 521729813}
+  character: {fileID: 1633895125}
 --- !u!1 &484194117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animatorController: {fileID: 0}
+  cellNumber: 0
   accelerationKey: 273
   decelerationKey: 274
   rotateLeftKey: 276
@@ -1702,6 +1703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animatorController: {fileID: 0}
+  cellNumber: 0
   accelerationKey: 273
   decelerationKey: 274
   rotateLeftKey: 276
@@ -2797,6 +2799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animatorController: {fileID: 0}
+  cellNumber: 0
   accelerationKey: 273
   decelerationKey: 274
   rotateLeftKey: 276
@@ -4056,7 +4059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7014b1fe922434bb696589f9b82de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1633895125}
+  character: {fileID: 506237896}
 --- !u!1 &1368083549 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1560362925543908, guid: 153bf4f7ccb6b9842baa4c869737fb3b,
@@ -4131,7 +4134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7014b1fe922434bb696589f9b82de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 521729813}
+  character: {fileID: 830826538}
 --- !u!1 &1462033427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4635,6 +4638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animatorController: {fileID: 0}
+  cellNumber: 0
   accelerationKey: 273
   decelerationKey: 274
   rotateLeftKey: 276
@@ -5189,6 +5193,26 @@ PrefabInstance:
     - target: {fileID: 4262241168183032, guid: 754d06f6e3ec61845a0664a0d590cadd, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856350394648326, guid: 754d06f6e3ec61845a0664a0d590cadd,
+        type: 3}
+      propertyPath: incrementKey
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856350394648326, guid: 754d06f6e3ec61845a0664a0d590cadd,
+        type: 3}
+      propertyPath: decrementKey
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856350394648326, guid: 754d06f6e3ec61845a0664a0d590cadd,
+        type: 3}
+      propertyPath: step
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856350394648326, guid: 754d06f6e3ec61845a0664a0d590cadd,
+        type: 3}
+      propertyPath: resetKey
+      value: 44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 754d06f6e3ec61845a0664a0d590cadd, type: 3}
@@ -6119,6 +6143,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5648dd6128e719d49a40cd697266c0c6, type: 2}
+    - target: {fileID: 82267361222928888, guid: 4db2845e987849544999db61d056e0b1,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db2845e987849544999db61d056e0b1, type: 3}
 --- !u!1 &2021254981 stripped
@@ -6213,6 +6242,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: b7960245a477cab49aaf750d71e77cee,
         type: 2}
+    - target: {fileID: -6057140222963153312, guid: cb265ace9ae87134094cc5ab1b441180,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed by
+        Humanoid clips.\n\tTransform 'Root_M'\n\tTransform 'Spine2_M'\n\tTransform
+        'Ankle_L'\n\tTransform 'Hip_L'\n\tTransform 'Head_M'\n\tTransform 'Toes_R'\n\tTransform
+        'ShoulderPart2_R'\n\tTransform 'Ankle_R'\n\tTransform 'ShoulderPart2_L'\n\tTransform
+        'Neck_M'\n\tand more ...\n\tFrom animation clip 'bolthorg_idle'\n\tFrom animation
+        clip 'bolthorg_walk'\n\tFrom animation clip 'bolthorg_walk'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb265ace9ae87134094cc5ab1b441180, type: 3}
 --- !u!1001 &2037060804
@@ -6831,7 +6871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7014b1fe922434bb696589f9b82de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 521729813}
+  character: {fileID: 830826538}
 --- !u!4 &2075330423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4864940962237810, guid: 609c5f5a75d570243b82c86bc6583f51,

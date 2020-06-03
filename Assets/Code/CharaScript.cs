@@ -5,8 +5,9 @@ using UnityEngine;
 public class CharaScript : ScriptedAnimationBehaviour
 {
     //private Animator _animatorController;
-    private int _cellNumber = 0;
+    public int cellNumber = 0;
     private float _currentSpeed;
+    private bool _shoot = false;
 
     [Header("Custom controls")]
     public KeyCode accelerationKey = KeyCode.UpArrow;
@@ -33,24 +34,16 @@ public class CharaScript : ScriptedAnimationBehaviour
     public CameraAnchorPoint cameraAnchorPoint;
     public CameraAnchor cameraAnchor;
 
-    void Start()
+    public void Start()
     {
-        //_animatorController = GetComponent<Animator>();
-
-        if(transform.parent != null && transform.parent.transform.parent != null && transform.parent.transform.parent.transform.parent != null)
-        {
-            int.TryParse(transform.parent.transform.parent.transform.parent.name, out _cellNumber);
-            _animatorController.SetInteger("CellNumber", _cellNumber);
-        }       
+        _animatorController.SetInteger("CellNumber", cellNumber);       
 
         float stateLength = _animatorController.GetCurrentAnimatorStateInfo(0).length;
         _animatorController.SetFloat("CycleOffset", Random.Range(0, stateLength));
 
         _animatorController.applyRootMotion = false;
 
-        //enabled = false;
-
-        switch (_cellNumber)
+        switch (cellNumber)
         {
             case 2:
                 _animatorController.SetTrigger("VictoryTrigger");
@@ -86,16 +79,16 @@ public class CharaScript : ScriptedAnimationBehaviour
                 _animatorController.SetTrigger("GymTrigger");
                 break;                
         }
+        enabled = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKeyDown(switchAKey) || Input.GetButtonUp("Cross"))
         {
-            switch (_cellNumber)
+            switch (cellNumber)
             {
                 case 3:
                     _animatorController.SetTrigger("DeathTrigger");
@@ -110,7 +103,7 @@ public class CharaScript : ScriptedAnimationBehaviour
         }
         else if (Input.GetKeyDown(switchBKey) || Input.GetButtonUp("Square"))
         {
-            switch (_cellNumber)
+            switch (cellNumber)
             {
                 case 4:
                     _animatorController.SetTrigger("EdgyTrigger");
@@ -122,14 +115,27 @@ public class CharaScript : ScriptedAnimationBehaviour
         }
         else if (Input.GetKeyDown(switchCKey) || Input.GetButtonUp("Circle"))
         {
-            _animatorController.SetInteger("AnimationID", 2);
-            _animatorController.SetTrigger("TriggerNextAnimation");
+            switch (cellNumber)
+            {
+                case 6:
+                    if (_animatorController.GetCurrentAnimatorStateInfo(0).IsName("WeaponIdle") && ! _shoot)
+                    {
+                        _animatorController.SetTrigger("AttackTrigger");
+                        _shoot = true;
+                    }
+                    else
+                    {
+                        _animatorController.SetTrigger("DrawTrigger");
+                        _shoot = false;
+                    }                    
+                    break;
+            }
         }
 
 
 
 
-        if (_cellNumber == 0)
+        if (cellNumber == 0)
         {
             // Looks if we press the accelerationKey
             if (Input.GetKey(accelerationKey) || JoysticksHelper.FilterAndEase(Input.GetAxis("DpadVertical")) > 0)
@@ -173,12 +179,12 @@ public class CharaScript : ScriptedAnimationBehaviour
             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime * rotationSigningFactor);
         }
 
-        if (_cellNumber == 11)
+        if (cellNumber == 11)
         {
             _animatorController.SetTrigger("JumpTrigger");
         }
 
-        if (_cellNumber == 13) { 
+        if (cellNumber == 13) { 
             _animatorController.applyRootMotion = Input.GetKey(accelerationKey) || JoysticksHelper.FilterAndEase(Input.GetAxis("LeftStickVertical")) > 0;
 
             Vector3 localPosition = transform.localPosition;
@@ -188,7 +194,7 @@ public class CharaScript : ScriptedAnimationBehaviour
             }
         }
 
-        if (_cellNumber == 13 && enableFollowCameraAnchorPoint && cameraAnchor != null && cameraAnchor._currentTargetId == 45)
+        if (cellNumber == 13 && enableFollowCameraAnchorPoint && cameraAnchor != null && cameraAnchor._currentTargetId == 45)
         {
             /*cameraAnchor.transform.position = cameraAnchorPoint.transform.position;
             cameraAnchor.transform.rotation = cameraAnchorPoint.transform.rotation;*/
