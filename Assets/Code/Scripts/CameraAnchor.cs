@@ -9,6 +9,7 @@ public class CameraAnchor : MonoBehaviour
     public GameObject anchorPointsParent;
     public float interpolationDuration = 0.5f;
     public CameraController cameraController;
+    public bool testMode = false;
 
     private CameraAnchorPoint[] _anchorPoints;
     public int _currentTargetId;
@@ -38,11 +39,15 @@ public class CameraAnchor : MonoBehaviour
             _currentTargetId += _currentTargetId < 0 ? _anchorPoints.Length : 0;
             ChangeAnchor();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void ChangeAnchor()
     {
-        Debug.Log("Change Anchor");
         StopAllCoroutines();
         StartCoroutine(LaunchInterpolation());
         cameraController.ResetView();
@@ -81,8 +86,6 @@ public class CameraAnchor : MonoBehaviour
 
     private void EnableAnimationBehaviour(ScriptedAnimationBehaviour animationBehaviour, bool value)
     {
-        Debug.Log(animationBehaviour);
-        Debug.Log(value);
         if (animationBehaviour != null)
         {
             animationBehaviour.enabled = value;

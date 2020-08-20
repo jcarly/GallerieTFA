@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class BreakAnimation : MonoBehaviour
+public class BreakAnimation : ScriptedAnimationBehaviour
 {
-    private Animator _animatorController;
     private int _count = 0;
     private int _random;
     private int _state;

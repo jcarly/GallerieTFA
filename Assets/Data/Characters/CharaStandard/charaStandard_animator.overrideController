@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: charaStandard_animator
+  m_Controller: {fileID: 9100000, guid: 5648dd6128e719d49a40cd697266c0c6, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f6778f2e84d1c834aa81fa931e0099f1, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: a3985171ff3ba154ebb833d0edb0f695,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: ffeec265a14bd15469b859be08dade1f, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 73a1c527a23972549967164658bc02e4,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: fa04989ac0f32c24ea397ca788d0df9a, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 6d93c46f27349bb428cc34c1dcfd9321,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 945647cf5f2b6f0499bc2281fc65ed86, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 0b97c3aba72c84d4d95ff751c8aa3ce4,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 326a373448baab145992744d3804e7b8, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 26dbdffa820f9c043a673beb016ba9b6,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: f2490e407e4bc2a4db0d658b341b473e, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: e8593e60699f8af4299262ec85001c40,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7082ed4e18235fc48a331257ce0d82e4, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 24d4190f17a81aa4fae4a73ccfe53ab2,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 844c0c6b2787fd14ab2748151a4cd511, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 62970976ffce4244ba49ff1654b820a2,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: f1956b6e81e92674caf108bdbb8738c7, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 12ad587903cb616438d33a09bf35e1ea,
+      type: 3}

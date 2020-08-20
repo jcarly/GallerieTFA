@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 4b18d6a6abfd931479b35b26077e0a1f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _pirateflag: {fileID: 2800000, guid: 0794b3251bbf43f47970a0bc906d7537, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

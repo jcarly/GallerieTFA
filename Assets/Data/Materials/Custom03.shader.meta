@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0cf7e72250150624388ed0c2d0f207fb
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _wolvy_baking_low_Wolvy_SHD_Normal: {fileID: 2800000, guid: e8777df792b909047b339763b990c562,
+      type: 3}
+  - _wolvy_baking_low_Wolvy_SHD_BaseColor: {fileID: 2800000, guid: fc95f489f933fef46af330aba08c1b73,
+      type: 3}
+  - _wolvy_baking_low_Wolvy_SHD_Metalness: {fileID: 2800000, guid: 8b4a39bc129dba24886e3fb1026fd34f,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
