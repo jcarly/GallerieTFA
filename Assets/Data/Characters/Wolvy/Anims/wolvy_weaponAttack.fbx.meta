@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: 4c94794df232bf74a80355f458c64ffa
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
     second: wolvy_weaponAttack
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -21,8 +21,8 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: Event PlaySound has a time (0.002653) outside the clip's
-      valid range (0.033333..0.333333). It will never be fired
+    animationImportWarnings: Event PlaySound has a time (0.003714) outside the clip's
+      valid range (0.033333..0.466667). It will never be fired
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -68,13 +68,6 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.8700265
-        functionName: StartParticleSystem
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -86,15 +79,18 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -104,6 +100,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -116,7 +115,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -1800,8 +1798,10 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e8bb5b41d3da2a346a4b0a0554e5e405,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

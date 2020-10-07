@@ -43,7 +43,7 @@ public class CharaScript : ScriptedAnimationBehaviour
 
     [Header("Camera Anchor Point")]
     public bool enableFollowCameraAnchorPoint = true;    
-    public CameraAnchorPoint cameraAnchorPoint;
+    //public CameraAnchorPoint cameraAnchorPoint;
     public CameraAnchor cameraAnchor;
 
     [Header("Test controls")]

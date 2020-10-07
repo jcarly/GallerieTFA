@@ -10,6 +10,7 @@ public class CameraAnchor : MonoBehaviour
     public float interpolationDuration = 0.5f;
     public CameraController cameraController;
     public bool testMode = false;
+    public bool hasMoved = true;
 
     private CameraAnchorPoint[] _anchorPoints;
     public int _currentTargetId;
@@ -51,6 +52,7 @@ public class CameraAnchor : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(LaunchInterpolation());
         cameraController.ResetView();
+        hasMoved = true;
     }
 
     IEnumerator LaunchInterpolation()
@@ -101,5 +103,10 @@ public class CameraAnchor : MonoBehaviour
                 EnableAnimationBehaviour(animationBehaviour[i], value);
             }
         }
+    }
+
+    public CameraAnchorPoint GetCurrentAnchorPoint()
+    {
+        return _anchorPoints[_currentTargetId];
     }
 }
